@@ -2,11 +2,16 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
-
 :root{
     --green-color: #198754;
     --text-color: white;
+}
+.section-heading{
+    font-size: medium;
+    font-weight: 700;
+    color: green;
 }
 
 nav{
@@ -16,45 +21,48 @@ nav{
     align-items: center;
     background-color: var(--green-color);
     color: var(--text-color);
+    position: sticky;
+    top: 0;
+    z-index: 10000000;
 }
-
 h1{
     font-size: 2.5rem;
 }
-
 nav > div:nth-child(2){
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-
-nav > div:nth-child(2) > h2{
+nav > div:nth-child(2) > h2 > a{
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: rgb(184, 184, 184);
 }
-
+nav > div:nth-child(2) > h2:first-child > a{
+    color: white;
+}
+nav > div:nth-child(2) > h2 > a:hover{
+    color: white;
+}
 nav > div:nth-child(3){
     width: 13%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
 }
-
 nav > div:nth-child(3) > button{
-    font-size: 1.1rem;
-    padding: 0.8rem 1.2rem;
-    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.4rem;
     font-weight: 600;
 }
-
 nav > div:nth-child(3) > button:nth-child(1){
     color:black;
     background-color: var(--text-color);
     border: none;
 }
-
 nav > div:nth-child(3) > button:nth-child(2){
     background: transparent;
     border: 1px solid var(--text-color);
@@ -62,3 +70,236 @@ nav > div:nth-child(3) > button:nth-child(2){
 
 }
 
+
+main{
+    background-image: url(1.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main>div{
+    text-align: center;
+}
+main > div:nth-child(2) > h2,
+main > div:nth-child(2) > h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+main > div:nth-child(2) > h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+main > div > button{
+    background: none;
+    border: none;
+    background-color: white;
+    font-size: medium;
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+}
+main > div:nth-child(1) > button,
+main > div:last-child > button{
+    background: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 50px;
+    transition: background-color 0.3s ease;
+}
+main > div:nth-child(2) > button{
+    cursor: pointer;
+}
+main > div:nth-child(2) > button:hover{
+    background-color: rgb(254, 248, 248);
+}
+
+
+#au{
+    position: relative;
+    top: 4rem;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+#au > div{
+    width: 48%;
+}
+#au > div > h3,#dest > div > h3{
+    font-size: 1.5rem;
+}
+#au > div > p{
+    color: gray;
+    text-align: justify;
+
+}
+#au > div > img{
+    object-fit: contain;
+    width: 100%;
+}
+#au > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem 0rem;
+}
+
+
+#dest{
+    position: relative;
+    top: 4rem;
+    margin-bottom: 4rem;
+}
+#dest > div{
+    text-align: center;
+    
+} 
+#dest > div > h2{
+    margin-bottom: 0.4rem
+}
+#dest > div:first-child{
+    margin-bottom: 4rem;
+}
+#dest > div:last-child{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+#dest > div:last-child >div{
+    width: 23.5%;
+    border: 1px solid rgb(206, 206, 206);
+    padding-bottom: 1.6rem;
+}
+#dest > div:last-child >div>img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+#dest > div:last-child >div>h4{
+    margin-bottom: 0.6rem;   
+}
+#dest > div:last-child >div>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+#dest > div:last-child >div>div>p{
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+
+#test{
+    position: relative;
+    background-image: url(45367.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+#test > div{
+    margin: auto;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.468);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0;
+}
+#test > div > div:nth-child(2){
+    width: 50%;
+}
+#test > div>div:nth-child(2)>p{
+    margin-bottom: 2rem;
+    font-size: medium;
+}
+#test > div>div:nth-child(2)>h3{
+    color: green;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+
+}
+#test > div>div:nth-child(2)>h4{
+    font-weight: 500;
+}
+
+
+#cu{
+    background-image: url(newssection-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    padding: 5rem 3rem;
+}
+#cu > h3{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+#cu > form{
+    width: 40%;
+}
+#cu > form > input{
+    display: block;
+    width: 70%;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+    outline: none;
+}
+#cu > form > label{
+    margin-bottom: 0.6rem;
+    display: block;
+    font-size: medium;
+    font-weight: 400;
+}
+#cu > form > input:last-child{
+    margin-top: 1.2rem;
+    width: 20%;
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+}
+#cu > form > span > [type="checkbox"]{
+    width: 14px;
+    height: 14px;
+
+}
+#cu > form > input:last-child:hover{
+    background-color: #156f45;
+}
+#cu > form > span{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+
+footer{
+    background-color: var(--green-color);
+    text-align: center;
+    padding: 1rem 0;
+    color: white;
+    font-size: large;
+}
+#dest:target, #test:target, #au:target, #cu:target{
+    padding-top: 6rem;
+}
